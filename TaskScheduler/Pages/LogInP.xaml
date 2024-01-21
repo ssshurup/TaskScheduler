@@ -1,0 +1,22 @@
+﻿<Page x:Class="TaskScheduler.Pages.LogInP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TaskScheduler.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LogInP" Background="White">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="288,161,0,0" TextWrapping="Wrap" Text="Log In" VerticalAlignment="Top"/>
+        <TextBox x:Name="loginTB" HorizontalAlignment="Left" Margin="357,161,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="288,184,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+        <TextBox x:Name="PassTB" HorizontalAlignment="Left" Margin="357,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SignInBTN" Content="Sign in" HorizontalAlignment="Left" Margin="288,205,0,0" VerticalAlignment="Top" Width="129" Click="SignInBTN_Click"/>
+
+        <Button x:Name="RegBTN" Content="Register" HorizontalAlignment="Left" Margin="422,205,0,0" VerticalAlignment="Top" Width="55" Click="RegBTN_Click"/>
+        <Button x:Name="AdmBTN" Content="Admin Menu" HorizontalAlignment="Left" Margin="288,230,0,0" VerticalAlignment="Top" Width="189" Click="AdmBTN_Click"/>
+
+    </Grid>
+</Page>
