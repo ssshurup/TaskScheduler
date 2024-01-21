@@ -24,7 +24,7 @@ namespace TaskScheduler.Pages
         public UserP()
         {
             InitializeComponent();
-            TaskListDG.ItemsSource = App.DB.tasks.ToList();
+            TaskListDG.ItemsSource = App.DB.tasks.ToList().Where(a => a.idUser == DataUs.id);
         }
         private void AddBT_Click(object sender, RoutedEventArgs e)
         {
@@ -45,7 +45,7 @@ namespace TaskScheduler.Pages
         
         private void ExitBT_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            NavigationService.Navigate(new LogInP());
         }
 
         private void CompleteBT_Click(object sender, RoutedEventArgs e)
@@ -59,14 +59,14 @@ namespace TaskScheduler.Pages
             if (selectedItem.status == true)
             {
                 string message = "Задание уже выполненно, хотите удалить его из списка? ";
-                string caption = "Ворота";
+                string caption = "Задание";
                 MessageBoxButton buttons = MessageBoxButton.YesNo;
                 var result = MessageBox.Show(message, caption, buttons, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
                     App.DB.tasks.Remove(selectedItem);
                     App.DB.SaveChanges();
-                    TaskListDG.ItemsSource = App.DB.tasks.ToList();
+                    TaskListDG.ItemsSource = App.DB.tasks.ToList().Where(a => a.idUser == DataUs.id);
                 }
             }
             else
@@ -77,7 +77,7 @@ namespace TaskScheduler.Pages
 
                 contextT.status = true;
                 App.DB.SaveChanges();
-                TaskListDG.ItemsSource = App.DB.tasks.ToList();
+                TaskListDG.ItemsSource = App.DB.tasks.ToList().Where(a => a.idUser == DataUs.id);
             }
                
             

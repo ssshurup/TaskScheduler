@@ -20,7 +20,6 @@ namespace TaskScheduler.Pages
     /// </summary>
     static class DataUs
     {
-        public static string name { get; set; }
         public static int id { get; set; }
     }
     public partial class LogInP : Page
@@ -47,7 +46,6 @@ namespace TaskScheduler.Pages
                 {
                     if (us.password == PassTB.Text)
                     {
-                        DataUs.name = us.name;
                         DataUs.id = us.id;
                         NavigationService.Navigate(new UserP());
                     }

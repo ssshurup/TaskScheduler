@@ -16,7 +16,6 @@
         <Button x:Name="SignInBTN" Content="Sign in" HorizontalAlignment="Left" Margin="288,205,0,0" VerticalAlignment="Top" Width="129" Click="SignInBTN_Click"/>
 
         <Button x:Name="RegBTN" Content="Register" HorizontalAlignment="Left" Margin="422,205,0,0" VerticalAlignment="Top" Width="55" Click="RegBTN_Click"/>
-        <Button x:Name="AdmBTN" Content="Admin Menu" HorizontalAlignment="Left" Margin="288,230,0,0" VerticalAlignment="Top" Width="189" Click="AdmBTN_Click"/>
 
     </Grid>
 </Page>
